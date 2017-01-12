@@ -76,15 +76,7 @@ def l_selfIntersect(line):
             else:
                 continue
     return False
-'''        
-def l_isClosed_FARZI(line):
-    for i in range(0,len(line)):
-        for j in range(i+1,len(line)):
-            if(line[i][0]==line[j][0] and line[i][1]==line[j][1]):
-                return True
-            else:
-                return False
-'''
+
 def l_isClosed(line):
     length=len(line)
     if(line[0][0]==line[length-1][0] and line[0][1]==line[length-1][1]):
@@ -94,18 +86,15 @@ def l_isClosed(line):
 
 def countIntersects(lineseg, poly):
     count=0
-    test=[]
     if(l_isClosed(poly)):
         seg=line_to_lineseg(poly)
         for i in seg:
             if(s_areCrossing(i,lineseg)):
                 count+=1
-                test.append(i)
             if((end_point_crossing(lineseg,i) in poly)):
                 count-=0.5
     return count
-    #return test
-
+    
 def p_inPolygon(p,poly):
     #test=float("inf")
     lineseg=[p,[1000,1000]]
@@ -145,8 +134,8 @@ if __name__=='__main__':
     #print(l_selfIntersect(poly))
     #print(line_to_lineseg(poly))
     #print(l_isClosed(line1))
-    print(p_inPolygon(point,poly))
-    print(p_inPolygon(point,poly1))
-    print(pol_contains(poly,poly1))
+    #print(p_inPolygon(point,poly))
+    #print(p_inPolygon(point,poly1))
+    #print(pol_contains(poly,poly1))
     #print(countIntersects(lineseg1,poly))
     plot_line_seg()
