@@ -1,0 +1,196 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.1.2, 1 February 2017) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper]{altacv}
+
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages.
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%%
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you may need to install
+%% Academicons.ttf in your operating system's font
+%% folder.
+
+
+% Change the page layout if you need to
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+
+% Change the font if you want to.
+
+% If using pdflatex:
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
+
+% Change the colours if you want to
+\definecolor{Mulberry}{HTML}{72243D}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{Sepia}
+\colorlet{accent}{Mulberry}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+%% sample.bib contains your publications
+\addbibresource{sample_1.bib}
+
+\begin{document}
+\name{Anurag Kulshrestha}
+\tagline{M.Sc. - Geoinformatics Student at ITC, University of Twente}
+\photo{2.8cm}{anurag}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{anurag.librian@gmail.com}
+  \phone{+917617611181}
+  \mailaddress{80, Pushpanjali Vatika, Sikandra}
+  \location{Agra, INDIA}
+  \homepage{anuragiirs.wordpress.com}
+  \twitter{@anurag41091}
+  \linkedin{linkedin.com/in/anurag-kulshrestha-38739478}
+  \github{github.com/hzsmhzsm}
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+%   \orcid{orcid.org/0000-0000-0000-0000}
+}
+
+%% Make the header extend all the way to the right, if you want.
+\begin{fullwidth}
+\makecvheader
+\end{fullwidth}
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[sample-p1sidebar]{Current Study}
+\cvevent{M.Sc.\ in Geographic Information Science and Earth Observation}{ITC, University of Twente}{Sept 2016 -- March 2018}{Enschede, Netherlands}
+\begin{itemize}
+\item JEP with Indian Institute of Remote Sensing (IIRS)-ISRO, Dehradun
+\item Specialization: Geoinformatics 
+\item Thesis Topic: Detection and Characterization of Oil Spills using Polarimetric SAR Remote Sensing
+\end{itemize}
+
+\cvsection{Experience}
+
+
+\cvevent{Logistics Management Software Developer}{Kumar Roadlines}{Feb 2016 -- April 2016}{Agra, India}
+\begin{itemize}
+\item Developed a logistics management system based on Java and Sqlite database
+\item Fully functional and presently helping in the management of a small fleet of tankers in Northern India.
+\end{itemize}
+
+\divider
+
+\cvevent{Attempt at a startup}{CAC Systems}{Jan 2015 -- Jan 2016}{Agra, India}
+\begin{itemize}
+\item Theme: Biorefienry based remediation of wastewater
+\item Incubator and Investor: Ashoka Chemicals, Agra
+\end{itemize}
+
+
+\cvsection{Projects}
+\cvevent{M.Sc. Dissertation: Detection and Characterization of Oil Spills using PolSAR Remote Sensing}{ITC, IIRS}{Sept 2017 - March 2018}{Dehradun, India}
+\begin{itemize}
+\item Multi-frequency analysis and developent of oil-spill detection model using UAVSAR, RISAT-1 and TerraSAR-X data.
+\item Model built using geospatial python libraries e.g. \textit{gdal}, \textit{ogr} and \textit{scipy} and  open-source softwares, e.g. \textit{PolSARPro}, \textit{QGIS}
+\item An oil spill detection tool using Qt-Designer is also under development.
+\end{itemize}
+
+\divider
+
+\cvevent{Bioremediation of Wastewater using Microalgae}{Indian Institute of Science (IISc)}{August 2015 -- December 2015}{Bangalore, India}
+\begin{itemize}
+\item Case study on the feasibiity of decentralized wastewater treatment using organic techniques such as aquaculture and hydroponics.
+\end{itemize}
+
+\divider
+
+\cvevent{M.Sc. Dissertation: Neutral Atom Traps and Bose-Hubbard Model}{Indian Institute of Science Education and Research}{August 2013 -- April 2014}{Bangalore, India}
+\begin{itemize}
+\item Domain: Cold-atom physics
+\item Modelling of magnetic neutral atom traps and 2 dimentional lattice to trap bosons in Mathematica.
+\end{itemize}
+
+
+%\medskip
+
+\cvsection{A Day of My Life}
+
+% Adapted from @Jake's answer from http://tex.stackexchange.com/a/82729/226
+% \wheelchart{outer radius}{inner radius}{
+% comma-separated list of value/text width/color/detail}
+\wheelchart{1.5cm}{0.5cm}{%
+  7/8em/accent!30/{Sleep},
+  2/8em/accent!40/{Sports, Yoga and Meditation},
+  8/8em/accent!60/Daytime job,
+  2/8em/accent!60/Time with Friends,
+  2/10em/accent/Recreational Learning,
+  3/6em/accent!20/Night-time work
+}
+
+\defbibfilter{papers}{
+  type=article
+}
+
+
+%\clearpage
+\cvsection[page2sidebar]{Publications} 	
+%\cvsection{Publications}
+\nocite{*}
+%\printbibliography
+\printbibliography[heading=pubtype,title={\printinfo{\faBook}{Books}},type=book]
+
+%\divider
+
+\printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Journal Articles}},type=article]
+%\printbibliography[heading=pubtype,title={\printinfo{\faFileTextO}{Journal Articles}},filter=papers]
+%\divider
+
+\printbibliography[heading=pubtype,title={\printinfo{\faGroup}{Conference Proceedings}},type=inproceedings]
+
+
+\faGroup 
+\textbf{Conference Proceedings}
+\vspace{.3cm}
+\begin{itemize}
+\item Kulshrestha, A. (2017). Dark Spot Detection and Characterization of Marine Surface Slicks using PolSAR Remote Sensing. Paper presented at Asian Conference on Remote Sensing-2017, New Delhi, India.
+\end{itemize}
+%% If the NEXT page doesn't start with a \cvsection but you'd
+%% still like to add a sidebar, then use this command on THIS
+%% page to add it. The optional argument lets you pull up the
+%% sidebar a bit so that it looks aligned with the top of the
+%% main column.
+%\addnextpagesidebar[-1ex]{page2sidebar}
+
+\end{document}
